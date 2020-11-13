@@ -1,8 +1,8 @@
 # jamstack_nuxt
 
-nuxt: v3.4.0
-node: v12.4.0
-yarn: v1.16.0
+- nuxt: v3.4.0
+- node: v12.4.0
+- yarn: v1.16.0
 
 ## Build Setup
 

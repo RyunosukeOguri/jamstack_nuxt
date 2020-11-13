@@ -3,16 +3,25 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts --port 6010",
+    "dev": "ENV=local nuxt-ts --port 6010",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
+    "build:dev": "ENV=development nuxt-ts build",
+    "export:dev": "ENV=development nuxt-ts export",
+    "build:prod": "ENV=production nuxt-ts build",
+    "export:prod": "ENV=production nuxt-ts export",
     "generate": "nuxt-ts generate"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "node-sass": "^5.0.0",
+    "nuxt": "^2.14.6",
+    "nuxt-property-decorator": "^2.8.8",
+    "sass-loader": "^10.1.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",

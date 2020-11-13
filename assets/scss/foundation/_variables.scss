@@ -1,0 +1,46 @@
+/* Variables
+----------------------------------------------------------------- */
+
+$point-pc: 1090px;
+$point-tablet: 768px;
+
+$container-width: 1200px;
+$container-min-width: 1300px;
+
+$color-map: (
+  base: #333,
+  primary-lighten: rgba(#1428ff, 0.15),
+  primary: #1428ff,
+  primary-darken: #1020cc,
+  secondary: #ae14ff,
+  light: #fff,
+  light-darken: #cccccc,
+  link: #4d5cff,
+  link-darken: #3e4acd,
+  accent: #f251b0,
+  danger: #ff1414,
+  twitter: #1ca0f2,
+  youtube: #f00,
+);
+
+$z-map: (
+  content: true,
+  button: true,
+  avatar: true,
+  avatar-file: true,
+  slider: true,
+  slider-link: true,
+  progress-lv1: true,
+  progress-lv2: true,
+  progress-lv3: true,
+  badge: true,
+  menu-overlay: true,
+  header: true,
+  menu-overlay-sp: true,
+  menu-panel: true,
+  modal-overlay: true,
+  modal: true,
+  tutorial: true,
+);
+
+$font-base: 'Robot';
