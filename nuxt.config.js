@@ -6,6 +6,10 @@ export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
+  dotenv: {
+    filename: envPath,
+  },
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'jamstack_nuxt',
@@ -30,7 +34,16 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/markdownit',
   ],
+
+  markdownit: {
+    injected: true,
+    html: true,
+    linkify: true,
+    typography: true,
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
@@ -41,9 +54,9 @@ export default {
 
   styleResources: {
     scss: [
-      '@/assets/css/foundation/_variables.scss',
-      '@/assets/css/foundation/_mixins.scss',
-      '@/assets/css/foundation/_functions.scss',
+      '@/assets/scss/foundation/_variables.scss',
+      '@/assets/scss/foundation/_mixins.scss',
+      '@/assets/scss/foundation/_functions.scss',
     ],
   },
 
@@ -55,5 +68,20 @@ export default {
 
   router: {
     base: '/jamstack_nuxt/',
+  },
+
+  generate: {
+    routes() {
+      return client
+        .getEntries({ content_type: process.env.CTF_POST_TYPE_ID })
+        .then((entries) => {
+          return entries.items.map((entry) => {
+            return {
+              route: '/posts/' + entry.fields.slug,
+              payload: entry,
+            }
+          })
+        })
+    },
   },
 }

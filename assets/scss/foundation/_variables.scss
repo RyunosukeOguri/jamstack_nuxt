@@ -1,16 +1,18 @@
 /* Variables
 ----------------------------------------------------------------- */
 
-$point-pc: 1090px;
-$point-tablet: 768px;
+$screen: (
+  sm: 480px,
+  md: 768px,
+  lg: 960px,
+) !default;
 
-$container-width: 1200px;
-$container-min-width: 1300px;
+$container-width: 1000px;
 
 $color-map: (
   base: #333,
-  primary-lighten: rgba(#1428ff, 0.15),
-  primary: #1428ff,
+  primary-lighten: rgba(#4d5cff, 0.15),
+  primary: #4d5cff,
   primary-darken: #1020cc,
   secondary: #ae14ff,
   light: #fff,
