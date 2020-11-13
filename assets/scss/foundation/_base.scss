@@ -49,20 +49,23 @@ select::-ms-expand {
 }
 
 html {
-  font-size: 62.5%;
   width: 100%;
   min-width: 320px;
   height: 100%;
   overflow-x: hidden;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 62.5%;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 }
 
 body {
   color: c(base);
-  font-family: $font-base, -apple-system, blinkMacSystemFont,
-    /* Macの欧文はSan Francisco (OS X 10.11以降) */ 'Helvetica Neue',
-    /* Macの欧文 (OS X 10.10以前) */ 'Segoe UI', /* Windowsの欧文 */ YuGothicM,
-    /* Windows8.1以上は游ゴシック */ YuGothic, /* Macの游ゴシック */ Meiryo,
-    /* 游ゴシックが入っていないWindows */ sans-serif;
   font-size: 1.6rem;
   font-weight: 600;
   -webkit-font-feature-settings: 'palt' 1;

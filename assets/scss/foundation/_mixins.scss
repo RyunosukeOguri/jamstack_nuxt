@@ -1,17 +1,19 @@
-/* Mixins
------------------------------------------------------------------ */
-@mixin pc($point: $point-pc) {
-  @media only screen and (min-width: $point) {
-    @content;
+//== Media Queries
+@mixin mq($size, $width: max) {
+  $result: 0;
+  @if (type-of($size) == number) {
+    $result: $size;
+  } @else {
+    @each $key, $value in $screen {
+      @if ($key == $size) {
+        $result: $value;
+      }
+    }
   }
-}
-@mixin tablet($point: $point-tablet) {
-  @media only screen and (min-width: $point) {
-    @content;
+  @if ($width == min) {
+    $result: $result + 1;
   }
-}
-@mixin sp($point: $point-tablet) {
-  @media only screen and (max-width: $point) {
+  @media (#{$width}-width: #{px2em($result)}) {
     @content;
   }
 }
