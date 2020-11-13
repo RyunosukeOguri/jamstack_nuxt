@@ -10,7 +10,7 @@
     "export:dev": "ENV=development nuxt-ts export",
     "build:prod": "ENV=production nuxt-ts build",
     "export:prod": "ENV=production nuxt-ts export",
-    "generate": "nuxt-ts generate",
+    "generate": "ENV=production nuxt-ts generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {

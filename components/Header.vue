@@ -4,10 +4,10 @@
       <Logo />
     </n-link>
     <nav class="c-header-nav">
-      <n-link class="c-header-nav__item" :to="'/posts'">Blog</n-link>
-      <n-link class="c-header-nav__item" :to="'/works'">Work</n-link>
-      <n-link class="c-header-nav__item" :to="'/members'">Member</n-link>
-      <n-link class="c-header-nav__item" :to="'/contact'">Contact</n-link>
+      <n-link class="c-header-nav__item" :to="'#'">Blog</n-link>
+      <n-link class="c-header-nav__item" :to="'#'">Work</n-link>
+      <n-link class="c-header-nav__item" :to="'#'">Member</n-link>
+      <n-link class="c-header-nav__item" :to="'#'">Contact</n-link>
     </nav>
   </header>
 </template>
