@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "ENV=local nuxt-ts --port 6010",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
+    "build": "ENV=local nuxt-ts build",
+    "start": "ENV=local nuxt-ts start",
     "build:dev": "ENV=development nuxt-ts build",
     "export:dev": "ENV=development nuxt-ts export",
     "build:prod": "ENV=production nuxt-ts build",
