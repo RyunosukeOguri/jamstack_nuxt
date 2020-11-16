@@ -1,7 +1,7 @@
 <template>
   <div class="l-container">
     <div>
-      <ul class="c-row">
+      <ul v-if="posts.length" class="c-row">
         <li v-for="post in posts" class="c-row__col -col-3">
           <n-link class="c-card" :to="`posts/${post.fields.slug}`">
             <div class="c-card__thumb">
@@ -20,12 +20,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { createClient } from '@/plugins/contentful.js'
-const client = createClient()
+import client from '@/plugins/contentful.js'
 
 @Component
 export default class IndexPage extends Vue {
-  asyncData ({ env } : { env: any }) {
+  asyncData ({ env, payload } : { env: any, payload: any }) {
     return Promise.all([
       // // fetch the owner of the blog
       // client.getEntries({
