@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "ENV=local nuxt-ts --port 6010",
-    "build": "ENV=local nuxt-ts build",
-    "start": "ENV=local nuxt-ts start",
+    "build:local": "ENV=local nuxt-ts build",
+    "start:local": "ENV=local nuxt-ts start",
     "build:dev": "ENV=development nuxt-ts build",
     "export:dev": "ENV=development nuxt-ts export",
-    "build:prod": "ENV=production nuxt-ts build",
-    "export:prod": "ENV=production nuxt-ts export",
-    "generate": "nuxt-ts generate",
+    "build": "ENV=production nuxt-ts build",
+    "export": "ENV=production nuxt-ts export",
+    "generate": "ENV=production nuxt-ts generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {

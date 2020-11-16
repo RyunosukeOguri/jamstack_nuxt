@@ -2,13 +2,11 @@ const environment = process.env.ENV || 'local'
 const envPath = `./.env.${environment}`
 require('dotenv').config({ path: envPath })
 
+const client = require('./plugins/contentful')
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
-
-  dotenv: {
-    filename: envPath,
-  },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -71,6 +69,7 @@ export default {
   },
 
   generate: {
+    fallback: true,
     routes() {
       return client
         .getEntries({ content_type: process.env.CTF_POST_TYPE_ID })
@@ -83,5 +82,9 @@ export default {
           })
         })
     },
+  },
+
+  dotenv: {
+    filename: envPath,
   },
 }

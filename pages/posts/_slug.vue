@@ -23,8 +23,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { createClient } from '@/plugins/contentful.js'
-const client = createClient()
+import client from '@/plugins/contentful.js'
 
 interface TPost {
   fields: {
